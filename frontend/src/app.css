@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+
+:root {
+  --color-blue: #3B82F6;
+  --color-green: #22C55E;
+  --color-yellow: #EAB308;
+  --color-purple: #A855F7;
+  --color-pink: #EC4899;
+  --color-orange: #F97316;
+  --color-teal: #14B8A6;
+  --color-red: #EF4444;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900;
+}

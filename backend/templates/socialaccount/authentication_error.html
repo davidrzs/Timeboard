@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Error</title>
+</head>
+<body>
+    <h1>Third-Party Login Failure</h1>
+    <p>An error occurred while attempting to login via your third-party account.</p>
+
+    <h2>Debug Info:</h2>
+    <p><strong>Error Code:</strong> {{ auth_error.code }}</p>
+    <p><strong>Exception:</strong> {{ auth_error.exception }}</p>
+
+    {% if auth_error %}
+    <pre>{{ auth_error }}</pre>
+    {% endif %}
+</body>
+</html>
