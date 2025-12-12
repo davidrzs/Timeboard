@@ -5,7 +5,7 @@
 	import TaskCard from './TaskCard.svelte';
 	import { tasks } from '../stores/tasks';
 	import { projects, activeProjects } from '../stores/projects';
-	import { isDraggingTask, burnedTaskIds, draggedTaskId, checkFireZoneDrop } from '../stores/ui';
+	import { isDraggingTask, burnedTaskIds, draggedTaskId, checkFireZoneDrop, isOverFireZone } from '../stores/ui';
 	import { parseQuick, formatDuration, formatDate, type QuickParsed } from '../parser';
 	import { get } from 'svelte/store';
 

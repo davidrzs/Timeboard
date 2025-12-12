@@ -2,8 +2,8 @@ import { writable, derived } from 'svelte/store';
 import type { User } from '../types';
 import { api } from '../api';
 
-const API_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:8000/api';
-const BASE_URL = API_URL.replace(/\/api$/, '');
+const API_URL = import.meta.env.PUBLIC_API_URL || '/api';
+const BASE_URL = API_URL.replace(/\/api$/, '') || '';
 
 interface AuthState {
 	user: User | null;
