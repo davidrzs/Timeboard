@@ -127,6 +127,9 @@ CORS_ALLOW_CREDENTIALS = True
 # Trust X-Forwarded-Proto header from reverse proxy
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
+# Force HTTPS for allauth OAuth redirects
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
+
 # Site framework
 SITE_ID = 1
 
