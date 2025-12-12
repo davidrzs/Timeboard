@@ -2,6 +2,9 @@ import { writable, derived } from 'svelte/store';
 import type { User } from '../types';
 import { api } from '../api';
 
+const API_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:8000/api';
+const BASE_URL = API_URL.replace(/\/api$/, '');
+
 interface AuthState {
 	user: User | null;
 	googleConnected: boolean;
@@ -31,7 +34,7 @@ function createAuthStore() {
 		async googleLogin() {
 			// Redirect to Google OAuth
 			const { url } = await api.auth.googleLoginUrl();
-			window.location.href = `http://localhost:8000${url}`;
+			window.location.href = `${BASE_URL}${url}`;
 		},
 		async logout() {
 			await api.auth.logout();
