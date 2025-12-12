@@ -136,6 +136,10 @@ SOCIALACCOUNT_PROVIDERS = {
     "google": {
         "SCOPE": ["profile", "email", "https://www.googleapis.com/auth/calendar.readonly"],
         "AUTH_PARAMS": {"access_type": "offline"},
+        "APP": {
+            "client_id": os.getenv("GOOGLE_CLIENT_ID", ""),
+            "secret": os.getenv("GOOGLE_CLIENT_SECRET", ""),
+        },
     }
 }
 
