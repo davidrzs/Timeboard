@@ -22,6 +22,7 @@ RUN npm ci --omit=dev
 
 ENV NODE_ENV=production
 ENV PORT=3000
+ENV HOST=::
 
 EXPOSE 3000
 

@@ -14,4 +14,4 @@ RUN uv run python manage.py collectstatic --noinput || true
 EXPOSE 8000
 
 CMD uv run python manage.py migrate && \
-    uv run gunicorn planner.wsgi:application --bind 0.0.0.0:8000 --workers 2
+    uv run gunicorn planner.wsgi:application --bind [::]:8000 --workers 2
